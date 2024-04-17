@@ -11,16 +11,13 @@
 <body>
     <main>
         <h1>Analisador de Número Real</h1>
-            Analisando o número <?php        
+            <?php    
             $numero = $_GET["numero"];
             $numeroFormatado = number_format($numero,3,',','.');
-            echo $numeroFormatado;
-            echo "\n";
-            echo 'A parte inteira do número é ';
-            echo floatval($numeroFormatado);
-            echo "\n";
-            echo 'A parte fracionário do número é '; 
-            echo 0 ."," . substr($numeroFormatado,strpos($numeroFormatado,",")+ 1);
+            echo '<p> Analisando o número <strong>'. $numeroFormatado .'</strong> informado pelo usuário: </p>'; 
+            echo '<li> A parte inteira do número é <strong>' . floatval($numeroFormatado) . '</strong></li>';
+            echo '<li> A parte fracionário do número é '; 
+            echo '<strong>' . 0 ."," . substr($numeroFormatado,strpos($numeroFormatado,",")+ 1) . '</strong>';
             ?>
         </form>
       
